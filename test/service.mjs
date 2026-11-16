@@ -160,8 +160,8 @@ await check('报告按账号生成：重点 + 摘要 + md/html/json 三份', asy
     focus: [{ title: '确认违约条款', detail: '对方周四给回复' }, { title: '付款条件已谈定 30 天' }],
   })
   assert.equal(a.empty, false)
-  assert.match(a.path, /reports\/r-.+\.md$/)
-  assert.match(a.htmlPath, /reports\/r-.+\.html$/)
+  assert.match(a.path, /reports[\\/]r-.+\.md$/)
+  assert.match(a.htmlPath, /reports[\\/]r-.+\.html$/)
   const markdown = readFileSync(a.path, 'utf8')
   assert.match(markdown, /## 重点/)
   assert.match(markdown, /确认违约条款/)
