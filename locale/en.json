@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Mail digest",
+    "description": "Fetches your IMAP mail on a schedule, tags it, summarises each message, threads related mail into a timeline, and turns every run into a report announced in DSH.",
+    "detail": "docs/DETAIL.md"
+  }
+}

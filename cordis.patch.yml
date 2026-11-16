@@ -1,0 +1,6 @@
+# dsh-mail-digest 插件行：作为 bundle patch 自动注入 profile 组合。
+# 账号不在这里配：装好后到「设置 → 邮件整理」里填 IMAP 服务器、账号和授权码，
+# 账号存 $DSH_HOME/mail-digest/account.json，密码存 DSH 凭据库。
+- insert:
+    - id: mail-digest
+      name: "@skyrocks/dsh-mail-digest"

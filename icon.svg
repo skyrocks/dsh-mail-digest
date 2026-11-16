@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" role="img" aria-label="Mail digest">
+  <rect x="6" y="6" width="24" height="14" rx="3" stroke="#4D6BFE" stroke-width="2.1"/>
+  <path d="M7.1 7.8 L17 13.6 C17.6 13.9 18.4 13.9 19 13.6 L28.9 7.8" stroke="#4D6BFE" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6" y="24" width="17" height="2.4" rx="1.2" fill="#4D6BFE"/>
+  <rect x="6" y="29.2" width="10" height="2.4" rx="1.2" fill="#4D6BFE" fill-opacity="0.5"/>
+</svg>

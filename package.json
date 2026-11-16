@@ -1,0 +1,91 @@
+{
+  "name": "@skyrocks/dsh-mail-digest",
+  "version": "0.4.2",
+  "description": "DeepSeek Harness 插件：自动整理邮箱——定时抓取、打标签、按线程梳理时间轴并总结，每次生成可回看、可删除的报告，用 DSH 内的通知提醒你",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./typert": "./typert.host.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "service.js",
+    "store.js",
+    "imap.js",
+    "threads.js",
+    "report.js",
+    "schedule.js",
+    "tools.js",
+    "client.js",
+    "typert.host.js",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "docs",
+    "icon.svg",
+    "locale/*.json",
+    "test"
+  ],
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.2.2-rc.2 <0.3.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-remotes"
+      ],
+      "immediately": true
+    }
+  },
+  "dependencies": {
+    "imapflow": "^2.12.0",
+    "mailparser": "^3.14.4"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-typert-protocol": "0.2.2-rc.2"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "email",
+    "imap",
+    "digest",
+    "inbox"
+  ],
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-typert-protocol": "0.2.2-rc.2"
+  },
+  "author": "skyrocks (https://github.com/skyrocks)",
+  "scripts": {
+    "test": "node test/store.mjs && node test/threads.mjs && node test/service.mjs && node test/schedule.mjs && node test/plugin.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyrocks/dsh-mail-digest.git"
+  },
+  "homepage": "https://github.com/skyrocks/dsh-mail-digest#readme",
+  "bugs": {
+    "url": "https://github.com/skyrocks/dsh-mail-digest/issues"
+  }
+}
