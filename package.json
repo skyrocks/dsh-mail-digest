@@ -1,6 +1,6 @@
 {
   "name": "@skyrocks/dsh-mail-digest",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "DeepSeek Harness 插件：自动整理邮箱——定时抓取、打标签、按线程梳理时间轴并总结，每次生成可回看、可删除的报告，用 DSH 内的通知提醒你",
   "license": "MIT",
   "type": "module",

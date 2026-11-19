@@ -1623,6 +1623,22 @@ window.__ModuleLoader__.load({
       }
     }
 
+    /** 设置页左侧导航里的图标（邮件整理）。 */
+    function MailGlyph(props) {
+      const size = props !== null && typeof props === "object" && typeof props.size === "number" ? props.size : 16;
+      return React.createElement(
+        "svg",
+        { width: size, height: size, viewBox: "0 0 16 16", fill: "none", "aria-hidden": "true", focusable: "false" },
+        React.createElement("path", {
+          d: "M2.3 4.4h11.4v7.2H2.3zM2.3 4.9l5.7 4.1 5.7-4.1",
+          stroke: "currentColor",
+          strokeWidth: 1.4,
+          strokeLinecap: "round",
+          strokeLinejoin: "round"
+        })
+      );
+    }
+
     function apply(ctx) {
       ctxRef = ctx;
       mountReady = ctx.remote.$mount(REMOTE).catch((error) => {
@@ -1634,6 +1650,11 @@ window.__ModuleLoader__.load({
       ctx.effect(() => ensureStyle());
       slots.inject("settings.section", () =>
         slots.register({ name: "settings.section", id: "mail-digest", order: 44, label: () => "邮件整理" }, Section)
+      );
+
+      // 设置页左侧导航的图标：不注册就是壳默认的齿轮。
+      slots.inject("settings.section.icon", () =>
+        slots.register({ name: "settings.section.icon", id: "mail-digest", order: 44 }, MailGlyph)
       );
       // 侧边栏的报告面板：类型 + 面板体。
       // 记住最近一次前台的会话：设置页里点报告时，用这个 id 把面板挂上去。
